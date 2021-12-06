@@ -1,15 +1,10 @@
 pipeline {
-    agent any
+    agent { label 'master' }
     stages {
-        stage('Example') {
+        stage('build') {
             steps {
-                echo 'Hello Pipeline'
+                echo "Hello World!"
             }
-        }
-    }
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
         }
     }
 }
